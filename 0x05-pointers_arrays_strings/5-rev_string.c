@@ -4,25 +4,25 @@
  * rev_string - reverses a string
  * @s: string to be reversed
  */
+
 void rev_string(char *s)
 {
-	char tmp;
-	int i, len, len1;
+	int i, max, half;
+	char first, last;
 
-	len = 0;
-	len1 = 0;
-
-	while (s[len] != '\0');
+	i = 0;
+	while (s[i] != '\0')
 	{
-		len++;
+	i++
 	}
-
-	len1 = len - 1;
-
-	for (i = 0; i < len / 2; i++)
+	max = i - 1;
+	half = max / 2;
+	while (half >= 0)
 	{
-		tmp = s[i];
-		s[i] = s[len1];
-		s[len1--] = tmp;
+	first = s[max - half];
+	last = s[half];
+	s[half] = first;
+	s[max - half] = last;
+	half--;
 	}
 }
