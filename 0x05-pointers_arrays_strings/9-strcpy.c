@@ -1,24 +1,19 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_array - prints n elements of an array
- * of integers
- * @a: pointer to a variable
- * @n: number of items in the array
+ * _strcpy - Copies a string pointed to by @src, including the
+ * terminating null byte, to a buffer pointed to by @dest.
+ * @dest: A buffer to copy the string to.
+ * @src: The source string to copy.
  */
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int index;
+	int i;
 
-	for (index = 0; index < n; index++)
+	for (i = 0; src[i]; i++)
 	{
-		printf("%d", a[index]);
-
-		if (index == n - 1)
-			continue;
-
-		printf(", ");
+		dest[i] = src[i];
 	}
-	printf("\n");
+	dest[i] = src[i];
+	return (dest);
 }
