@@ -8,6 +8,7 @@
 char *cap_string(char *s)
 {
 	int i = 0;
+
 	while (*(s + i) != '\0')
 	{
 		if (i == 0 && (*(s + i) >= 97 && *(s + i) <= 122))
