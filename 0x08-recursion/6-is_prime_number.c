@@ -4,6 +4,7 @@
  * is_prime_number - returns 1 if the input integer is a prime number
  * otherwise return 0
  * @n: input number
+ * @i: Original number to test with.
  * Return: int
  */
 
